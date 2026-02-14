@@ -23,6 +23,85 @@ Bu sayede kodla uğraşmadan içerikleri değiştirebilirsiniz.
 #### Menü Yazılarını Değiştirmek
 
 Menüde görünen yazılar şu dosyada bulunur:
-```bash
+
+```
 messages/en.json
 ```
+
+Bu dosyayı açtığınızda şöyle bir bölüm görürsünüz:
+
+```json
+{
+  "header": {
+    "home": "Home",
+    "stats": "Stats",
+    "services": "Services",
+    "work": "Work",
+    "projects": "Projects",
+    "resume": "Resume",
+    "about": "About",
+    "skills": "Skills",
+    "languages": "Languages",
+    "volunteering": "Volunteering",
+    "certificates": "Certificates",
+    "contact": "Contact",
+    "startAProject": "Start a Project"
+  }
+}
+```
+
+Tırnak içindeki yazıları istediğiniz gibi değiştirebilirsiniz.
+
+Örneğin:
+
+```json
+"home": "My Home"
+```
+
+Dosyayı kaydettikten sonra site otomatik olarak güncellenir.
+Herhangi bir kod değiştirmeniz gerekmez.
+
+Bu dosyanın adının `en` olması, İngilizce dili temsil ettiğini gösterir.
+
+Yeni bir dil eklemek istediğinizde aynı yapıda yeni bir dosya oluşturmanız gerekir.
+Örneğin Türkçe için:
+
+```
+tr.json
+```
+
+Yeni dil ekleme işlemi, ilerleyen bölümlerde adım adım açıklanacaktır.
+
+#### Logo Değiştirmek
+
+Logo dosya yolu şu dosyada bulunur:
+
+```
+data/techIcons.ts
+```
+
+```ts
+export const SiteLogo = "/assets/images/logoLight.svg";
+```
+
+Buraya yeni logo dosyanızın yolunu yazmanız yeterlidir.
+
+
+
+#### E-posta Adresini Değiştirmek
+
+E-posta bilgisi şu dosyadadır:
+
+```
+data/contacts.ts
+```
+
+```ts
+export const contactData = {
+  email: "example@email.com"
+};
+```
+
+Buraya kendi e-posta adresinizi yazabilirsiniz.
+
+
