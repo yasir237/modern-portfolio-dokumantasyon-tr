@@ -58,6 +58,14 @@ Tırnak içindeki yazıları istediğiniz gibi değiştirebilirsiniz.
 "home": "My Home"
 ```
 
+Aynı zamanda son satır olan `startAProject` bilgisini değiştirdiğimizde buttonun içindeki metni değişir
+
+Örneğin:
+
+```json
+"startAProject": "Make Your Project"
+```
+
 Dosyayı kaydettikten sonra site otomatik olarak güncellenir.
 Herhangi bir kod değiştirmeniz gerekmez.
 
