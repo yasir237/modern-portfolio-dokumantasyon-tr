@@ -112,4 +112,8 @@ export const contactData = {
 
 Buraya kendi e-posta adresinizi yazabilirsiniz.
 
+---
+### Ana Sayfası -> Hero
+<img width="1919" height="903" alt="hero-map" src="https://github.com/user-attachments/assets/dc682336-cc6f-45dd-9584-c07483292a17" />
+
 
