@@ -12,7 +12,7 @@ Modern, yüksek performanslı ve ölçeklenebilir bir geliştirici portfolyo uyg
 
 Her bir bölümün ieriğini nereden yönetilebilir detaylıca açıklayan dokümentasyondur.
 
-### 1. Header (Üst Menü)
+### Header (Üst Menü)
 Header, sitenin en üst kısmında bulunan menüdür.
 Buradaki yazılar, dil seçimi ve iletişim bilgisi ayrı dosyalardan kontrol edilir.
 
@@ -20,7 +20,7 @@ Bu sayede kodla uğraşmadan içerikleri değiştirebilirsiniz.
 
 <img width="1919" height="903" alt="header-map" src="https://github.com/user-attachments/assets/ae3597c6-38b9-4370-8469-5c92eeee67c3" />
 
-#### Menü Yazılarını Değiştirmek
+#### ‣ Menü Yazılarını Değiştirmek
 
 Menüde görünen yazılar şu dosyada bulunur:
 
@@ -80,7 +80,7 @@ tr.json
 
 Yeni dil ekleme işlemi, ilerleyen bölümlerde adım adım açıklanacaktır.
 
-#### Logo Değiştirmek
+#### ‣ Logo Değiştirmek
 
 Logo dosya yolu şu dosyada bulunur:
 
@@ -96,7 +96,7 @@ Buraya yeni logo dosyanızın yolunu yazmanız yeterlidir.
 
 
 
-#### E-posta Adresini Değiştirmek
+#### ‣ E-posta Adresini Değiştirmek
 
 E-posta bilgisi şu dosyadadır:
 
@@ -123,7 +123,7 @@ Hero alanında gördüğünüz tüm içerikler (yazılar, butonlar, fotoğraf, s
 
 Bu sayede içerikleri değiştirmek için kod bilmenize gerek yoktur.
 
-#### Yazılar
+#### ‣ Yazılar
 Hero alanındaki tüm metinler `messages/en.json` dosyasından gelir.
 
 Bu dosyayı açtıktan sonra `"home"` bölümünü bulun. İçinde aşağıdaki yapıyı göreceksiniz:
@@ -153,7 +153,7 @@ Buradaki tırnak içindeki metinleri istediğiniz gibi değiştirebilirsiniz.
 Dosyayı kaydettikten sonra site otomatik olarak güncellenir.
 Ekstra bir işlem yapmanız gerekmez.
 
-#### İletişim Bilgileri
+#### ‣ İletişim Bilgileri
 İletişim bilgileri ayrı bir dosyada tutulur. Bunun sebebi, buradaki bilgilerin hem Hero alanında hem de İletişim bölümünde kullanılmasıdır.
 
 
@@ -206,7 +206,7 @@ href: "https://instagram.com/kullaniciadiniz"
 Böylece kullanıcı Hero alanındaki Instagram ikonuna tıkladığında sizin profilinize yönlendirilir.
 
 
-#### Profil Fotoğrafı
+#### ‣ Profil Fotoğrafı
 Profil fotoğrafı `data/personal.ts` dosyadan güncellenir,
 
 ```ts
@@ -216,7 +216,7 @@ export const personalData = {
 ```
 Buraya kendi fotoğrafınızın dosya yolunu yazmanız yeterlidir.
 
-#### İstatistik Bilgileri
+#### ‣ İstatistik Bilgileri
 Deneyim yılı, proje sayısı gibi bilgiler hem Hero alanında hem de İstatistikler bölümünde kullanılır.
 
 Bilgileri güncellemek için `data\stats.ts` dosyasını açarak aşağıdaki gibi değerleri güncelleyebilir:
