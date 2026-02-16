@@ -406,8 +406,15 @@ Bir ikon değiştirmek için `icon` alanına kullanmak istediğiniz ikonun adın
 </p>
 
 <p align="center">
-  <sub>Ulaşamazsanız bu <a href="https://lucide.dev/icons" target="_blank"> https://lucide.dev/icons </a> linke tıklayın</sub>
+  <sub>
+    Eğer ikon sayfasına ulaşamazsanız,
+    <a href="https://lucide.dev/icons" target="_blank">
+      buraya tıklayarak
+    </a>
+    doğrudan erişebilirsiniz.
+  </sub>
 </p>
+
 
 3. Kullanmak istediğiniz ikonun adını kopyalayın.
    (Örneğin: `Palette`, `Shield`, `Cpu`, `Smartphone`)
