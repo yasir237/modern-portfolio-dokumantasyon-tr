@@ -235,8 +235,7 @@ Sayıları değiştirdiğinizde site otomatik olarak güncellenir.
 
 Bu görsel, Ana Sayfa’daki **İstatistikler bölümünün** hangi dosyalardan beslendiğini göstermektedir.
 
-<img width="1919" height="903" alt="stats-map" src="https://github.com/user-attachments/assets/012f091f-f868-415d-b247-bd44fb929c0b" />
-
+<img width="1919" height="903" alt="stats-map" src="https://github.com/user-attachments/assets/9c22e682-9a69-4367-b5e9-8a891f1940b9" />
 
 Bu bölümde görünen bilgiler ayrı dosyalardan yönetilir. Bu sayede sayıları ve yazıları kolayca değiştirebilirsiniz.
 
