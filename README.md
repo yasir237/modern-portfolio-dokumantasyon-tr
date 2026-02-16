@@ -311,13 +311,128 @@ projects: 120
 
 Kaydettiğinizde hem Ana Sayfa’daki İstatistikler bölümü hem de bu verileri kullanan diğer alanlar otomatik olarak güncellenir.
 
+### Ana Sayfa → Hizmetler
+
+Bu görsel, Ana Sayfa’daki **Hizmetler bölümünün** hangi dosyalardan beslendiğini göstermektedir.
+
+
+<img width="1919" height="903" alt="services-map" src="https://github.com/user-attachments/assets/ed5fcb35-ef32-4807-b04d-ad6e47e2cf4f" />
+
+Bu bölümde görünen bilgiler tek bir dosyadan, `messages/services/en.json` dosyasından yönetilir:
+
+Dosya yapısı şu şekildedir:
+```json
+{
+  "title": "My Quality Services",
+  "subtitle": "I turn ideas into powerful, scalable, and beautifully crafted digital experiences — built with precision and long-term vision.",
+  "items": [
+    {
+      "title": "Full Stack Development",
+      "description": "I create complete end-to-end web solutions — from intuitive, high-performance interfaces to secure backend architectures. My focus is on clean code, scalability, and exceptional user experience across all devices.",
+      "icon": "Code"
+    },
+    {
+      "title": "UI / UX Design",
+      "description": "I design elegant, functional, and user-centered interfaces. Every layout, interaction, and flow is shaped to feel natural, visually refined, and effortless, ensuring your users enjoy every moment of the experience.",
+      "icon": "Palette"
+    },
+    {
+      "title": "Algorithm Development",
+      "description": "I develop custom algorithms that solve complex problems with precision and efficiency. From optimized logic structures to intelligent automation, I engineer systems that run smarter, faster, and more reliably.",
+      "icon": "Cpu"
+    },
+    {
+      "title": "Website Security & Maintenance",
+      "description": "I protect and maintain websites using industry-standard security practices. With continuous monitoring, performance optimization, and regular updates, I ensure your website stays fast, stable, and fully secure.",
+      "icon": "Shield"
+    }
+  ]
+}
+```
+
+### Ne Nereden Değişir?
+
+* `title` → Bölüm başlığı
+* `subtitle` → Üst açıklama metni
+* `items` → Tüm hizmet kartları
+
+Her kart için:
+
+* `title` → Hizmet başlığı
+* `description` → Hizmet açıklaması
+* `icon` → Kullanılan ikon adı
+
+Yeni hizmet eklemek için `items` içine yeni bir obje eklemeniz yeterlidir.
+Dosyayı kaydettiğinizde site otomatik olarak güncellenir.
+
+Yeni bir kart eklemek için `items` dizisine aşağıdaki yapıyı eklemeniz yeterlidir.
+
+```json
+{
+      "title": "",
+      "description": "",
+      "icon": ""
+    }
+```
+
+Her kart nesnesi arasına `,` (virgül) koyulmalıdır.
+Ancak son nesneden sonra virgül eklenmemelidir. Aksi halde JSON dosyası hata verir.
+
+
+## İkon Seçimi
+
+Hizmet kartlarında kullanılan ikonlar `lucide-react` kütüphanesinden gelir.
+
+Bir ikon değiştirmek için `icon` alanına kullanmak istediğiniz ikonun adını yazmanız yeterlidir:
+
+```json
+"icon": "Code"
+```
+
+### İkon Nasıl Seçilir?
 
 
 
+1. İkon listesini görmek için:
 
+<p align="center">
+  <a href="https://lucide.dev/icons" target="_blank">
+    <img 
+      src="https://github.com/user-attachments/assets/6ce78af2-d171-4f5c-a698-80db4404bd8a"
+      alt="Lucide React İkonları"
+      width="900"
+      style="border-radius:15px;"
+    />
+  </a>
+</p>
 
+<p align="center">
+  <sub>Ulaşamazsanız bu <a href="https://lucide.dev/icons" target="_blank"> https://lucide.dev/icons </a> linke tıklayın</sub>
+</p>
 
+3. Kullanmak istediğiniz ikonun adını kopyalayın.
+   (Örneğin: `Palette`, `Shield`, `Cpu`, `Smartphone`)
 
+4. JSON dosyasında ilgili kartın `icon` alanına yapıştırın:
 
+```json
+"icon": "Smartphone"
+```
 
+Kaydettiğinizde ikon otomatik olarak güncellenir.
+
+İkon adını doğru şekilde öğrenmek için aşağıdaki adımları takip edin:
+
+<br>
+
+<p align="center">
+  <img width="900" alt="İkon adını kopyalama" src="https://github.com/user-attachments/assets/1d017023-ca6e-4fab-a754-53d04df011da" style="border-radius:15px;" />
+</p>
+
+1. İstediğiniz ikonun üzerine tıklayın.
+2. Detaylar sayfasına giderek kodunu görüntüleyin.
+3. Açılan sayfada ikonun adını kopyalayın.
+4. Kopyaladığınız ismi JSON dosyasındaki `"icon"` alanına yapıştırın.
+
+> Not: İkon adı büyük/küçük harfe duyarlıdır. İsmi sitede göründüğü şekilde yazmanız gerekir.
 
