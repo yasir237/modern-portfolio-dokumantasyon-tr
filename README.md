@@ -442,3 +442,43 @@ Kaydettiğinizde ikon otomatik olarak güncellenir.
 
 > Not: İkon adı büyük/küçük harfe duyarlıdır. İsmi sitede göründüğü şekilde yazmanız gerekir.
 
+### Ana Sayfa → Öne Çıkan Projeler
+
+Bu görsel, Ana Sayfa’daki **Önce Çıkan Hizmetler** hangi dosyalardan beslendiğini göstermektedir.
+
+<img width="1919" height="903" alt="featured-projectes-map" src="https://github.com/user-attachments/assets/d5e1810d-69fd-410b-918b-66fc55cf57fd" />
+
+Bu bölümde görünen bilgiler tek bir dosyadan, `messages/projects/index/en.json` dosyasından yönetilir:
+
+Dosya yapısı şu şekildedir:
+
+```json
+{
+  "featuredProjects": {
+    "title": "Featured Projects",
+    "subtitle": "Showcasing innovative solutions built with modern technologies",
+    "viewProject": "View Project"
+  }
+}
+```
+
+#### ‣ Değiştirilebilir Alanlar
+
+* `title` → Bölüm başlığı
+* `subtitle` → Üst açıklama metni
+* `viewProject` → Buttonun içindeki metin
+
+Metni değiştirdiğinizde sayfa otomatik olarak güncellenir.
+
+Diğer proje bilgileri bu bölümden manuel olarak değiştirilmez.
+Bu alanlar projelerden otomatik olarak (dinamik şekilde) çekilir.
+
+Yeni bir projenin nasıl ekleneceğini ilerleyen bölümlerde detaylı olarak göstereceğiz.
+
+Bir projenin “Öne Çıkan Projeler” alanında görüntülenebilmesi için, ilgili projenin JSON dosyasına aşağıdaki özelliğin eklenmesi gerekir.
+
+```json
+"isFeatured": true,
+```
+
+
