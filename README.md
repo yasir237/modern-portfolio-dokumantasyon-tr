@@ -231,6 +231,94 @@ export const statsData = {
 ```
 Sayıları değiştirdiğinizde site otomatik olarak güncellenir.
 
+### Ana Sayfa → İstatistikler
+
+Bu görsel, Ana Sayfa’daki **İstatistikler bölümünün** hangi dosyalardan beslendiğini göstermektedir.
+
+<img width="1919" height="903" alt="stats-map" src="https://github.com/user-attachments/assets/012f091f-f868-415d-b247-bd44fb929c0b" />
+
+
+Bu bölümde görünen bilgiler ayrı dosyalardan yönetilir. Bu sayede sayıları ve yazıları kolayca değiştirebilirsiniz.
+
+#### ‣ Başlık ve Metinler
+
+
+Bölüm başlığı ve alt metinler `messages/en.json` dosyasından gelir.
+
+Dosyayı açtıktan sonra `"home"` → `"stats"` bölümünü bulun.
+
+Aşağıdaki gibi bir yapı göreceksiniz:
+
+```json
+"home": {
+    "stats": {
+      "title": "Our Achievements",
+      "subtitle": "Let the figures tell the story of our impact before you explore our work",
+      "yearsLabel": "Years",
+      "yearsDesc": "of Experience",
+      "projectsLabel": "Projects",
+      "projectsDesc": "Successfully Completed",
+      "clientsLabel": "Clients",
+      "clientsDesc": "Worldwide",
+      "awardsLabel": "Awards",
+      "awardsDesc": "& Recognition",
+      "trustedBy": "Trusted by industry leaders worldwide",
+      "yearsExp": "Years Exp",
+      "projects": "Projects",
+      "k": "K"
+    }
+}
+```
+
+Buradaki metinleri istediğiniz gibi değiştirebilirsiniz.
+
+Örneğin:
+
+```json
+"title": "Our Successes"
+```
+
+Dosyayı kaydettiğinizde site otomatik olarak güncellenir.
+
+#### ‣ Sayıları Güncellemek
+
+Deneyim yılı, proje sayısı, müşteri sayısı ve ödül sayısı ayrı bir dosyada tutulur.
+
+Şu dosyayı açın:
+
+```
+data/stats.ts
+```
+
+İçinde aşağıdaki yapıyı göreceksiniz:
+
+```ts
+export const statsData = {
+  years: 5,
+  projects: 54,
+  clients: 2,
+  awards: 48
+};
+```
+
+Sayıları kendi bilgilerinize göre değiştirebilirsiniz.
+
+Örneğin:
+
+```ts
+years: 8,
+projects: 120
+```
+
+Kaydettiğinizde hem Ana Sayfa’daki İstatistikler bölümü hem de bu verileri kullanan diğer alanlar otomatik olarak güncellenir.
+
+
+
+
+
+
+
+
 
 
 
