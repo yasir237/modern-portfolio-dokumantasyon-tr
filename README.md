@@ -315,7 +315,6 @@ Kaydettiğinizde hem Ana Sayfa’daki İstatistikler bölümü hem de bu veriler
 
 Bu görsel, Ana Sayfa’daki **Hizmetler bölümünün** hangi dosyalardan beslendiğini göstermektedir.
 
-
 <img width="1919" height="903" alt="services-map" src="https://github.com/user-attachments/assets/ed5fcb35-ef32-4807-b04d-ad6e47e2cf4f" />
 
 Bu bölümde görünen bilgiler tek bir dosyadan, `messages/services/en.json` dosyasından yönetilir:
@@ -350,7 +349,7 @@ Dosya yapısı şu şekildedir:
 }
 ```
 
-### Ne Nereden Değişir?
+#### ‣ Ne Nereden Değişir?
 
 * `title` → Bölüm başlığı
 * `subtitle` → Üst açıklama metni
@@ -379,7 +378,7 @@ Her kart nesnesi arasına `,` (virgül) koyulmalıdır.
 Ancak son nesneden sonra virgül eklenmemelidir. Aksi halde JSON dosyası hata verir.
 
 
-## İkon Seçimi
+#### ‣ İkon Seçimi
 
 Hizmet kartlarında kullanılan ikonlar `lucide-react` kütüphanesinden gelir.
 
@@ -389,7 +388,7 @@ Bir ikon değiştirmek için `icon` alanına kullanmak istediğiniz ikonun adın
 "icon": "Code"
 ```
 
-### İkon Nasıl Seçilir?
+#### ‣ İkon Nasıl Seçilir?
 
 
 
