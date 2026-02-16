@@ -482,3 +482,93 @@ Bir projenin “Öne Çıkan Projeler” alanında görüntülenebilmesi için, 
 ```
 
 
+### Ana Sayfa → Tüm Projeler Alanı
+Bu görsel, Ana Sayfa’daki **Tüm Projeler bölümünün** hangi dosyalardan beslendiğini göstermektedir.
+
+<img width="1919" height="903" alt="featured-projectes-down-map" src="https://github.com/user-attachments/assets/5428db7f-3da8-42a1-a5da-52fb2ef0ffb5" />
+
+
+Bu bölümde görünen:
+
+* Başlık (Explore My Complete Portfolio)
+* Açıklama metni
+* “View All Projects” butonu
+* Proje, Teknoloji ve Yıl istatistikleri
+
+iki farklı dosyadan yönetilir.
+
+
+#### ‣ Metinler Nereden Değişir?
+
+Başlık, açıklama ve buton metni aşağıdaki dosyadan düzenlenir:
+
+```
+messages/projects/index/en.json
+```
+
+Dosya yapısı:
+
+```json
+"featuredProjects": {
+  "allProjects": {
+    "title": "Explore My Complete Portfolio",
+    "description": "Discover more...",
+    "button": "View All Projects",
+    "stats": {
+      "projects": "Projects",
+      "technologies": "Technologies",
+      "years": "Years"
+    }
+  }
+}
+```
+
+#### ‣ Değiştirilebilir Alanlar
+
+* `title` → Bölüm başlığı
+* `description` → Açıklama metni
+* `button` → Buton yazısı
+* `stats` → Alt istatistik başlıkları
+
+Örneğin:
+
+```json
+"title": "Tüm Projelerimi Keşfedin",
+"button": "Tüm Projeleri Gör"
+```
+
+
+#### ‣ Sayılar Nereden Değişir?
+
+Alt kısımda görünen:
+
+* Proje sayısı
+* Kullanılan teknoloji sayısı
+* Deneyim yılı
+
+Daha önce `İstatistikler` bölümünde anlatıldığı gibi şu dosyadan çekilir:
+
+```
+data/stats.ts
+```
+
+Dosya yapısı:
+
+```ts
+export const statsData = {
+  years: 5,
+  technologies: 26,
+  projects: 54
+};
+```
+
+Buradaki sayıları değiştirdiğinizde alan otomatik olarak güncellenir.
+
+
+
+
+
+
+
+
+
