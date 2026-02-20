@@ -1,6 +1,26 @@
 # Modern Portfolio Kılavuz Dokümantasyonu
 Modern, modüler ve JSON tabanlı portfolyo sisteminin mimari yapısını ve içerik yönetim modelini açıklayan resmi dokümantasyon.
 
+Eğer teknik bilginiz yoksa veya JSON dosyalarını hızlı bir şekilde düzenlemek isterseniz, bu dokümantasyondaki ilgili bölümü doğrudan **ChatGPT veya başka bir yapay zeka aracına** gönderebilirsiniz.
+
+Örneğin:
+
+* Yeni bir proje eklemek istiyorum
+* Yeni bir hizmet kartı eklemek istiyorum
+* Deneyim veya eğitim bilgisi eklemek istiyorum
+* Bir alanın yapısını değiştirmek istiyorum
+
+İlgili dokümantasyon bölümünü ve mevcut dosya içeriğini yapay zeka aracına gönderdiğinizde, size:
+
+* Hangi dosyayı düzenlemeniz gerektiğini
+* Dosyanın hangi kısmını değiştirmeniz gerektiğini
+* Yeni JSON yapısının nasıl olması gerektiğini
+* Güncellenmiş dosyanın son halini
+
+hazır şekilde verecektir.
+
+Bu sayede teknik detaylarla uğraşmadan gerekli değişiklikleri güvenli bir şekilde yapabilirsiniz.
+
 ## Modern Portfolio
 Modern, yüksek performanslı ve ölçeklenebilir bir geliştirici portfolyo uygulaması. Estetik tasarım, modüler mimari ve JSON tabanlı içerik yönetimini tek bir güçlü sistemde birleştirir.
 
@@ -565,7 +585,7 @@ export const statsData = {
 Buradaki sayıları değiştirdiğinizde alan otomatik olarak güncellenir.
 
 
-# Ana Sayfa → Deneyim & Eğitim
+## Ana Sayfa → Deneyim & Eğitim
 Bu görsel, Ana Sayfa’daki **Deneyim & Eğitim** bölümünün hangi dosyalardan beslendiğini göstermektedir.
 
 <img width="1919" height="903" alt="experience-education-map" src="https://github.com/user-attachments/assets/09797f30-9e52-40d2-9e02-102e8ff7f0c6" />
@@ -713,6 +733,106 @@ Birden fazla eğitim bilgisini eklemek için:
 
 
 
+## Ana Sayfa → Yetenekler (Skills & Expertise)
+Bu görsel, Ana Sayfa’daki **Yetenekler** bölümünün hangi dosyalardan beslendiğini göstermektedir.
+
+<img width="1919" height="903" alt="skills-map" src="https://github.com/user-attachments/assets/92571936-b8f2-4f17-b425-619f50508af0" />
+
+
+Bu bölüm aşağıdaki dosyadan yönetilir:
+
+```
+messages/skills/en.json
+```
+
+Dosya yapısı şu şekildedir:
+
+```json
+{
+  "title": "Skills & Expertise",
+  "subtitle": "Technologies and tools I work with...",
+  "categories": {
+    "programmingLanguages": "Programming Languages",
+    "frameworks": "Frameworks & Libraries",
+    "concepts": "Concepts & Techniques",
+    "databases": "Databases"
+  },
+  "skills": {
+    "programmingLanguages": [],
+    "frameworks": [],
+    "concepts": [],
+    "databases": []
+  }
+}
+```
+
+
+#### ‣ Başlık ve Kategori İsimlerini Değiştirmek
+
+* `title` → Bölüm başlığı
+* `subtitle` → Açıklama metni
+* `categories` → Sekme isimleri
+
+Örneğin:
+
+```json
+"title": "Yeteneklerim",
+"programmingLanguages": "Programlama Dilleri"
+```
+
+Kaydettiğinizde sayfa otomatik olarak güncellenir.
+
+
+#### ‣ Yetenek (Skill) Nasıl Eklenir?
+
+Her kategori kendi dizisi içinde yer alır.
+
+Örnek:
+
+```json
+"programmingLanguages": [
+  { "name": "C#" },
+  { "name": "Java" }
+]
+```
+
+#### ‣ Yeni Programlama Dili Eklemek
+
+```json
+{ "name": "Python" }
+```
+
+
+#### ‣ Yeni Framework Eklemek
+
+```json
+"frameworks": [
+  { "name": "ASP.NET MVC Core" },
+  { "name": "Laravel" },
+  { "name": "React" }
+]
+```
+
+
+#### ‣ Yeni Concept Eklemek
+
+```json
+{ "name": "Clean Architecture" }
+```
+
+
+#### ‣ Yeni Database Eklemek
+
+```json
+{ "name": "PostgreSQL" }
+```
+
+
+#### ‣ Önemli Not
+
+* Her obje arasına `,` (virgül) koyulmalıdır.
+* Son elemandan sonra virgül eklenmemelidir.
+* Sadece `"name"` alanını doldurmanız yeterlidir.
 
 
 
