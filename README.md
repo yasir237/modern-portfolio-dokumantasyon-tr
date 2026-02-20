@@ -565,6 +565,150 @@ export const statsData = {
 Buradaki sayıları değiştirdiğinizde alan otomatik olarak güncellenir.
 
 
+# Ana Sayfa → Deneyim & Eğitim
+Bu görsel, Ana Sayfa’daki **Deneyim & Eğitim** bölümünün hangi dosyalardan beslendiğini göstermektedir.
+
+<img width="1919" height="903" alt="experience-education-map" src="https://github.com/user-attachments/assets/09797f30-9e52-40d2-9e02-102e8ff7f0c6" />
+
+
+Bu bölüm aşağıdaki dosyadan yönetilir:
+
+```
+messages/resume/en.json
+```
+
+Dosya yapısı şu şekildedir:
+
+```json
+{
+  "title": "Experience & Education",
+  "subtitle": "My professional journey and academic achievements",
+  "tabs": {
+    "experience": "My Experience",
+    "education": "My Education"
+  },
+  "experience": [],
+  "education": []
+}
+```
+
+
+
+#### ‣ Başlık ve Sekmeler
+
+* `title` → Bölüm ana başlığı
+* `subtitle` → Açıklama metni
+* `tabs.experience` → Deneyim sekme adı
+* `tabs.education` → Eğitim sekme adı
+
+Metni değiştirdiğinizde sayfa otomatik güncellenir.
+
+#### ‣ Deneyim Bilgisi Nasıl Eklenir?
+
+Deneyimler `"experience"` dizisi içinde yer alır.
+
+Örnek yapı:
+
+```json
+{
+  "year": "July 2025 - August 2025",
+  "title": "Freelance Full-Stack Developer",
+  "company": "AI-Powered Audio Separation Platform"
+}
+```
+
+#### ‣ Deneyim Alanların Anlamı
+
+* `year` → Çalışma tarih aralığı
+* `title` → Pozisyon adı
+* `company` → Şirket veya proje adı
+
+#### ‣ Yeni Deneyim Eklemek
+
+`experience` dizisine yeni bir obje eklemeniz yeterlidir:
+
+```json
+"experience": [
+  {
+    "year": "2026 - Present",
+    "title": "Senior Developer",
+    "company": "Tech Company"
+  }
+]
+```
+
+Yani birden fazla proje eklemek istendiğinde yapı bu şekilde oluşmaktadır:
+```json
+"experience": [
+  {
+    "year": "2026 - Present",
+    "title": "Project 1",
+    "company": "Alrawi"
+  },
+  {
+    "year": "2024 - Present",
+    "title": "Project 2",
+    "company": "Alrawi"
+  }
+]
+```
+
+> Not: Her obje arasına virgül koyulmalıdır, ancak son objeden sonra virgül eklenmemelidir.
+
+
+#### ‣ Eğitim Bilgisi Nasıl Eklenir?
+
+Eğitim bilgileri `"education"` dizisi içinde yer alır.
+
+Örnek yapı:
+
+```json
+{
+  "year": "September 2021 - June 2025",
+  "title": "Bachelor in Computer Engineering",
+  "company": "Kırıkkale University, Kırıkkale"
+}
+```
+
+#### ‣ Eğitim Alanların Anlamı
+
+* `year` → Eğitim tarih aralığı
+* `title` → Bölüm veya diploma adı
+* `company` → Üniversite veya kurum adı
+
+#### ‣ Yeni Eğitim Eklemek
+
+`education` dizisine yeni bir obje ekleyin:
+
+```json
+"education": [
+  {
+    "year": "2026 - 2028",
+    "title": "Master in Software Engineering",
+    "company": "Example University"
+  }
+]
+```
+
+Birden fazla eğitim bilgisini eklemek için:
+
+```json
+"education": [
+  {
+    "year": "2026 - 2028",
+    "title": "Master in Software Engineering",
+    "company": "Example- 1 University"
+  },
+  {
+    "year": "2023 - 2026",
+    "title": "Bachelor in Software Engineering",
+    "company": "Example- 2 University"
+  }
+]
+```
+
+> Not: Her obje arasına virgül koyulmalıdır, ancak son objeden sonra virgül eklenmemelidir.
+
 
 
 
