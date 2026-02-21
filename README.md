@@ -733,7 +733,7 @@ Birden fazla eğitim bilgisini eklemek için:
 
 
 
-## Ana Sayfa → Yetenekler (Skills & Expertise)
+### Ana Sayfa → Yetenekler (Skills & Expertise)
 Bu görsel, Ana Sayfa’daki **Yetenekler** bölümünün hangi dosyalardan beslendiğini göstermektedir.
 
 <img width="1919" height="903" alt="skills-map" src="https://github.com/user-attachments/assets/92571936-b8f2-4f17-b425-619f50508af0" />
@@ -834,5 +834,98 @@ Her kategori kendi dizisi içinde yer alır.
 * Son elemandan sonra virgül eklenmemelidir.
 * Sadece `"name"` alanını doldurmanız yeterlidir.
 
+
+
+### Ana Sayfa → Diller 
+Bu görsel, Ana Sayfa’daki **Diller** bölümünün hangi dosyalardan beslendiğini göstermektedir.
+
+<img width="1919" height="903" alt="languages-map" src="https://github.com/user-attachments/assets/0359f538-bba8-4c3d-8188-1e81562e0dd1" />
+
+Bu bölüm aşağıdaki dosyadan yönetilir:
+
+```
+messages/languages/en.json
+```
+
+Dosya yapısı şu şekildedir:
+
+```json
+{
+  "title": "Languages",
+  "subtitle": "Mastering languages...",
+  "levels": {
+    "native": "Native",
+    "professional": "Professional",
+    "intermediate": "Intermediate"
+  },
+  "languages": []
+}
+```
+
+
+#### ‣ Başlık ve Seviye İsimlerini Değiştirmek
+
+* `title` → Bölüm başlığı
+* `subtitle` → Açıklama metni
+* `levels` → Dil seviyeleri
+
+Örneğin:
+
+```json
+"title": "Diller",
+"native": "Anadil"
+```
+
+Kaydettiğinizde sayfa otomatik olarak güncellenir.
+
+#### ‣ Yeni Dil Nasıl Eklenir?
+
+Her dil `"languages"` dizisi içinde yer alır.
+
+Örnek yapı:
+
+```json
+{
+  "name": "Arabic",
+  "nativeName": "العربية",
+  "level": "native",
+  "flag": "🇮🇶",
+  "backward": "/assets/images/LanguagesFlags/iraq.png"
+}
+```
+
+#### ‣ Alanların Anlamı
+
+* `name` → Dilin İngilizce adı
+* `nativeName` → Dilin kendi dilindeki adı
+* `level` → Seviye (native, professional, intermediate)
+* `flag` → Emoji bayrak
+* `backward` → Arka plan bayrak görselinin yolu
+
+#### ‣ Yeni Dil Eklemek
+
+`languages` dizisine yeni bir obje eklemeniz yeterlidir:
+
+```json
+{
+  "name": "German",
+  "nativeName": "Deutsch",
+  "level": "intermediate",
+  "flag": "🇩🇪",
+  "backward": "/assets/images/LanguagesFlags/germany.png"
+}
+```
+
+#### ‣ Önemli Notlar
+
+* `level` alanı sadece şu değerlerden biri olmalıdır:
+
+  * `native`
+  * `professional`
+  * `intermediate`
+
+* Her obje arasına virgül koyulmalıdır.
+
+* Son elemandan sonra virgül eklenmemelidir.
 
 
