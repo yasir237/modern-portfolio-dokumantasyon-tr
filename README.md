@@ -1022,7 +1022,7 @@ Her etkinlik `"volunteering"` dizisine bir obje olarak eklenir.
 ### Ana Sayfa → Sertifikalar
 Bu görsel, Ana Sayfa’daki **Sertifikalar** bölümünün hangi dosyalardan beslendiğini göstermektedir.
 
-<img width="1919" height="903" alt="certificates-map" src="https://github.com/user-attachments/assets/545953a7-8194-4b90-922b-ff409c015790" />
+<img width="1919" height="903" alt="certificates-map" src="https://github.com/user-attachments/assets/9ba47c0d-af48-417b-b564-8fad8a28a810" />
 
 Bu bölüm aşağıdaki dosyadan yönetilir:
 
