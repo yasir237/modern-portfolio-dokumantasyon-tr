@@ -1143,3 +1143,82 @@ Her sertifika `"certificates"` dizisine bir obje olarak eklenir.
 * Son elemandan sonra virgül konulmamalıdır.
 * Görsel yolu doğru yazılmalıdır.
 
+
+
+
+
+### Ana Sayfa → Vision
+
+Bu görsel, Ana Sayfa’daki **Vision** bölümünün hangi dosyalardan beslendiğini göstermektedir.
+
+<img width="1919" height="903" alt="vision-map" src="https://github.com/user-attachments/assets/bea35b68-ffe5-4b01-8e6e-55a422bc2f4c" />
+
+
+Bu bölüm aşağıdaki dosyadan yönetilir:
+
+```
+messages/vision/en.json
+```
+
+Ana sayfada görünen büyük vurgu cümleleri (statement metinleri) bu dosyadan otomatik olarak çekilir.
+
+#### ‣ Dosya Yapısı
+
+```json
+{
+  "statements": [
+    {
+      "text": "I turn complex ideas into unforgettable digital experiences",
+      "direction": "default"
+    }
+  ]
+}
+```
+
+#### ‣ Statement Yapısı
+
+Her metin `"statements"` dizisi içinde bir obje olarak tanımlanır.
+
+Örnek:
+
+```json
+{
+  "text": "I don’t just write code, I craft game-changing solutions",
+  "direction": "right"
+}
+```
+
+#### ‣ Alanların Açıklaması
+
+* `text` → Ekranda görünen metin
+* `direction` → Animasyon yönü
+
+#### ‣ Direction (Animasyon Yönleri)
+
+`direction` alanı şu değerleri alabilir:
+
+* `"default"` → Standart giriş animasyonu
+* `"right"` → Sağdan giriş animasyonu
+* `"down"` → Aşağıdan giriş animasyonu
+
+Yanlış değer girilirse animasyon düzgün çalışmayabilir.
+
+#### ‣ Yeni Statement Eklemek
+
+Yeni bir vurgu cümlesi eklemek için `statements` dizisine aynı yapıda yeni bir obje ekleyin:
+
+```json
+{
+  "text": "Design is where creativity meets logic",
+  "direction": "default"
+}
+```
+
+#### ‣ Önemli Kurallar
+
+* Her obje arasına virgül koyulmalıdır.
+* Son elemandan sonra virgül koyulmamalıdır.
+* `direction` değeri geçerli olmalıdır.
+
+
+
