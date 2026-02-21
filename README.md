@@ -1019,10 +1019,127 @@ Her etkinlik `"volunteering"` dizisine bir obje olarak eklenir.
 
 
 
+### Ana Sayfa → Sertifikalar
+Bu görsel, Ana Sayfa’daki **Sertifikalar** bölümünün hangi dosyalardan beslendiğini göstermektedir.
 
+<img width="1919" height="903" alt="certificates-map" src="https://github.com/user-attachments/assets/545953a7-8194-4b90-922b-ff409c015790" />
 
+Bu bölüm aşağıdaki dosyadan yönetilir:
 
+```
+messages/certificates/en.json
+```
 
+Başlık, alt başlık, kategori isimleri ve tüm sertifikalar bu dosyadan otomatik olarak çekilir.
 
+#### ‣ Dosya Yapısı
 
+```json
+{
+  "title": "Certificates & Achievements",
+  "subtitle": "Professional certifications and continuous learning journey",
+  "certificatesCount": "Certificates",
+  "viewCertificate": "View Certificate",
+  "of": "/",
+  "categories": {},
+  "certificates": []
+}
+```
+
+#### ‣ Başlık ve Metinleri Değiştirme
+
+* `title` → Bölüm başlığı
+* `subtitle` → Açıklama metni
+* `certificatesCount` → Sertifika sayısı yazısı
+* `viewCertificate` → Buton metni
+
+Örnek:
+
+```json
+"title": "Sertifikalar",
+"viewCertificate": "Sertifikayı Gör"
+```
+
+#### ‣ Kategori Yönetimi
+
+Kategoriler `categories` objesi içinde tanımlıdır:
+
+```json
+"categories": {
+  "ai": "Artificial Intelligence",
+  "cybersecurity": "Cybersecurity",
+  "devops": "DevOps"
+}
+```
+
+Sol taraftaki anahtar (`ai`, `devops` gibi) teknik değerdir.
+Sağ taraftaki metin arayüzde görünen isimdir.
+
+Yeni kategori eklemek için:
+
+```json
+"mobile": "Mobile Development"
+```
+
+#### ‣ Yeni Sertifika Nasıl Eklenir?
+
+Her sertifika `"certificates"` dizisine bir obje olarak eklenir.
+
+Örnek yapı:
+
+```json
+{
+  "title": "Diction, Announcing and Presentation",
+  "issuer": "Republic of Türkiye – Ministry of National Education",
+  "date": "2026",
+  "category": "effectiveCommunication",
+  "img": "/assets/images/Certificates/diksiyon.png",
+  "link": "#"
+}
+```
+
+#### ‣ Alanların Açıklaması
+
+* `title` → Sertifika adı
+* `issuer` → Veren kurum
+* `date` → Yıl veya tarih
+* `category` → Yukarıda tanımlanan kategori anahtarı
+* `img` → Sertifika görsel yolu
+* `link` → Sertifika bağlantısı (PDF, doğrulama linki vb.)
+
+#### ‣ Görsel Ekleme
+
+1. Sertifika görselini şu klasöre ekleyin:
+
+```
+/assets/images/Certificates/
+```
+
+2. Dosya yolunu `img` alanında belirtin:
+
+```json
+"img": "/assets/images/Certificates/sertifika-adi.png"
+```
+
+#### ‣ Yeni Sertifika Eklemek
+
+`certificates` dizisine yeni bir obje eklemeniz yeterlidir:
+
+```json
+{
+  "title": "Cloud Computing Fundamentals",
+  "issuer": "ABC Academy",
+  "date": "2025",
+  "category": "cloudComputing",
+  "img": "/assets/images/Certificates/cloud.png",
+  "link": "https://certificate-link.com"
+}
+```
+
+#### ‣ Önemli Kurallar
+
+* `category` değeri mutlaka `categories` içinde tanımlı olmalıdır.
+* Her obje arasına virgül konulmalıdır.
+* Son elemandan sonra virgül konulmamalıdır.
+* Görsel yolu doğru yazılmalıdır.
 
