@@ -929,3 +929,100 @@ Her dil `"languages"` dizisi içinde yer alır.
 * Son elemandan sonra virgül eklenmemelidir.
 
 
+
+### Ana Sayfa → Gönüllülük Bölümü
+Bu görsel, Ana Sayfa’daki **Gönüllülük** bölümünün hangi dosyalardan beslendiğini göstermektedir.
+
+<img width="1919" height="903" alt="volunteering-map" src="https://github.com/user-attachments/assets/26abe781-2dd1-4fdf-ae19-c796022610aa" />
+
+Bu bölüm aşağıdaki dosyadan yönetilir:
+
+```
+messages/volunteering/en.json
+```
+
+Gönüllülük başlığı ve tüm etkinlik içerikleri bu dosyadan otomatik olarak çekilir.
+
+
+
+#### ‣ Dosya Yapısı
+
+```json
+{
+  "title": "Volunteering",
+  "volunteering": []
+}
+```
+
+
+#### ‣ Yeni Gönüllülük Etkinliği Nasıl Eklenir?
+
+Her etkinlik `"volunteering"` dizisine bir obje olarak eklenir.
+
+Örnek yapı:
+
+```json
+{
+  "role": "Guest Speaker",
+  "organization": "Bahçeşehir College – Kırıkkale Campus",
+  "event": "Career Journeys: How I Succeeded",
+  "location": "Kırıkkale, Türkiye",
+  "date": "November 2025",
+  "description": "As a representative of Kırıkkale University, I shared my experiences...",
+  "image": "/assets/images/Volunteering/bahcesehir-katilim-belgesi.png"
+},
+{
+      "role": "Organizing Committee Member",
+      "organization": "Kırıkkale University",
+      "event": "International Symposium on History of Science",
+      "location": "Kırıkkale, Turkey",
+      "date": "November 2024",
+      "description": "Served as a member of the organizing committee for the International Symposium on History of Science, contributing to planning, organizing, website management, and supervision to ensure the success of the academic event.",
+      "image": "/assets/images/Volunteering/Committee.png"
+}
+```
+
+#### ‣ Alanların Açıklaması
+
+* `role` → Görev (Örn: Guest Speaker, Mentor, Volunteer)
+* `organization` → Kurum adı
+* `event` → Etkinlik adı
+* `location` → Şehir ve ülke
+* `date` → Tarih bilgisi
+* `description` → Açıklama metni
+* `image` → Sertifika veya etkinlik görsel yolu
+
+#### ‣ Görsel Ekleme
+
+1. Görseli şu klasöre ekleyin:
+
+```
+/assets/images/Volunteering/
+```
+
+2. Dosya adını `image` alanında belirtin:
+
+```json
+"image": "/assets/images/Volunteering/dosya-adi.png"
+```
+
+
+#### ‣ Önemli JSON Kuralları
+
+* Her obje arasına `,` virgül konulmalıdır.
+* Son objeden sonra virgül konulmamalıdır.
+* Görsel yolu doğru yazılmalıdır.
+* Dosya yapısı bozulursa sistem hata verir.
+
+
+
+
+
+
+
+
+
+
+
+
+
