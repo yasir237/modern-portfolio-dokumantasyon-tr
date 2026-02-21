@@ -1367,4 +1367,99 @@ Yeni bir sosyal medya eklemek için:
 
 
 
+### Projects Sayfası → Hero & Filtre Alanı
+Bu görsel, Projeler Sayfasının hangi dosyalardan beslendiğini göstermektedir.
 
+<img width="1919" height="903" alt="our-project-map" src="https://github.com/user-attachments/assets/8c915b07-3b69-4c88-be81-d087b036b70e" />
+
+> Yeni bir proje nasıl eklenmesi gerektiğini ileri anlatımlarda anlatılacaktır.
+
+Bu bölüm aşağıdaki dosyadan yönetilir:
+
+```
+messages/projects/index/en.json
+```
+
+Sayfa başlığı, açıklama metni, arama alanı yazıları ve kategori isimleri bu dosyadan otomatik olarak çekilir.
+
+#### ‣ Hero (Başlık Alanı)
+
+Sayfanın üst kısmındaki başlık ve açıklama metni buradan yönetilir.
+
+Örnek Yapı
+
+```json
+"hero": {
+  "badge": "Portfolio",
+  "title": "Our Projects",
+  "subtitle": "Explore our portfolio of innovative solutions and creative works that drive success"
+}
+```
+
+#### ‣ Alanlar
+
+* `badge` → Küçük üst etiket (örneğin: Portfolio)
+* `title` → Ana başlık
+* `subtitle` → Açıklama metni
+
+#### ‣ Arama ve Filtre Metinleri
+
+Arama alanı ve filtre yazıları `search` objesinden gelir.
+
+Örnek Yapı
+
+```json
+"search": {
+  "placeholder": "Search projects...",
+  "filterButton": "Filters",
+  "showingResults": "Showing",
+  "project": "project",
+  "projects": "projects"
+}
+```
+
+#### ‣ Alanlar
+
+* `placeholder` → Arama kutusu iç yazısı
+* `filterButton` → Filtre butonu metni
+* `showingResults` → Sonuç sayısı yazısı (örnek: Showing 3 projects)
+* `project` / `projects` → Tekil ve çoğul metinler
+
+#### ‣ Kategoriler (Filtre Butonları)
+
+Üstteki kategori filtreleri `categories` objesinden gelir.
+
+Örnek Yapı
+
+```json
+"categories": {
+  "all": "All",
+  "webDevelopment": "Web Development",
+  "mobileApp": "Mobile App",
+  "design": "Design",
+  "aiMl": "AI/ML",
+  "blockchain": "Blockchain"
+}
+```
+
+* **Sol Taraf (Anahtar):** Teknik değer. Projelerin kategori alanı ile birebir aynı olmalıdır.
+
+* **Sağ Taraf (Metin):** Arayüzde görünen isimdir.
+
+#### ‣ Yeni Kategori Eklemek
+
+Yeni bir filtre butonu eklemek için:
+
+```json
+"gameDevelopment": "Game Development"
+```
+
+⚠️ Dikkat:
+Bu kategoriye ait projelerin `category` değeri de `"gameDevelopment"` olmalıdır.
+
+#### ‣ Önemli Kurallar
+
+* JSON yapısı bozulmamalıdır.
+* Her satır arasında virgül olmalıdır.
+* Son elemandan sonra virgül olmamalıdır.
+* Kategori anahtarları proje dosyaları ile eşleşmelidir.
