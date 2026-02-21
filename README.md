@@ -1222,3 +1222,149 @@ Yeni bir vurgu cümlesi eklemek için `statements` dizisine aynı yapıda yeni b
 
 
 
+
+
+### Ana Sayfa → İletişim
+Bu görsel, Ana Sayfa’daki **İletişim** bölümünün hangi dosyalardan beslendiğini göstermektedir.
+
+<img width="1919" height="903" alt="contact-map" src="https://github.com/user-attachments/assets/c47d1635-8c01-4240-9abe-247564757954" />
+
+Bu bölüm iki farklı dosyadan yönetilir:
+
+```
+messages/en.json
+```
+
+ve
+
+```
+data/contacts.ts
+```
+
+* `messages/en.json` → Metin içerikleri (başlıklar, form alanları, mesajlar)
+* `data/contacts.ts` → Gerçek iletişim bilgileri ve sosyal medya linkleri
+
+#### ‣ Metin İçerikleri (messages/en.json)
+
+İletişim başlığı, açıklama yazısı ve form alanları buradan yönetilir.
+
+Dosya Yapısı:
+
+```json
+"contact": {
+  "title": "Let's Work Together",
+  "subtitle": "Got an idea or project? Let’s collaborate and turn your vision into reality.",
+  "badge": "Contact Me",
+  "form": {},
+  "success": {},
+  "info": {},
+  "social": {}
+}
+```
+
+#### ‣ Başlık ve Açıklama Değiştirme
+
+```json
+"title": "Benimle İletişime Geç",
+"subtitle": "Bir fikrin mi var? Birlikte hayata geçirelim."
+```
+
+#### ‣ Form Alanlarını Düzenleme
+
+```json
+"form": {
+  "name": {
+    "label": "Name",
+    "placeholder": "John Doe"
+  },
+  "email": {
+    "label": "Email",
+    "placeholder": "john@example.com"
+  },
+  "subject": {
+    "label": "Subject",
+    "placeholder": "Project Inquiry"
+  },
+  "message": {
+    "label": "Message",
+    "placeholder": "Tell me about your project..."
+  },
+  "submit": "Send Message",
+  "sending": "Sending..."
+}
+```
+
+Buradaki tüm metinler serbestçe değiştirilebilir.
+
+#### ‣ Başarılı Gönderim Mesajı
+
+```json
+"success": {
+  "title": "Message Sent Successfully!",
+  "message": "Thank you for reaching out. I'll get back to you as soon as possible."
+}
+```
+
+#### ‣ Gerçek İletişim Bilgileri (data/contacts.ts)
+
+Gerçek e-posta, telefon, konum ve sosyal medya linkleri bu dosyada yer alır.
+
+Dosya Yapısı
+
+```ts
+export const contactData = {
+  email: "example@gmail.com",
+  phone: "+90 500 000 00 00",
+  location: "Ankara, Türkiye",
+  cvPath: "/assets/docs/cv.pdf",
+  projectsPath: "/projects",
+  socialLinks: []
+}
+```
+
+#### ‣ E-posta / Telefon / Konum Değiştirme
+
+```ts
+email: "yourmail@gmail.com",
+phone: "+90 555 555 55 55",
+location: "Ankara, Türkiye",
+```
+
+#### ‣ Sosyal Medya Linkleri
+
+Her sosyal medya hesabı `socialLinks` dizisine bir obje olarak eklenir.
+
+```ts
+{
+  name: "LinkedIn",
+  icon: "Linkedin",
+  href: "https://www.linkedin.com/in/username"
+}
+```
+
+#### ‣ Alanların Açıklaması
+
+* `name` → Platform adı
+* `icon` → Kullanılacak ikon adı
+* `href` → Profil bağlantısı
+
+Yeni bir sosyal medya eklemek için:
+
+```ts
+{
+  name: "YouTube",
+  icon: "Youtube",
+  href: "https://youtube.com/@username"
+}
+```
+
+#### ‣ Önemli Notlar
+
+* `messages/en.json` sadece metinleri değiştirir.
+* Gerçek iletişim bilgileri `data/contacts.ts` dosyasındadır.
+* `icon` değeri kullanılan ikon sistemine uygun olmalıdır.
+* TypeScript yapısı bozulmamalıdır (virgül ve süslü parantezlere dikkat).
+
+
+
+
