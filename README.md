@@ -1780,14 +1780,6 @@ Müşteri veya kullanıcı yorumu göstermek için kullanılır.
 * `author` → Yorumu yapan kişi
 * `position` → Kişinin pozisyonu
 
-#### ‣ Önemli Notlar
-
-* Bu alanların tamamı zorunlu değildir.
-* Ancak profesyonel bir proje sayfası için önerilir.
-* JSON yapısı kesinlikle bozulmamalıdır.
-* Virgül hatalarına dikkat edilmelidir.
-* `type` değerleri sistem tarafından okunur, değiştirilmemelidir.
-
 
 #### ‣ Görseller
 
@@ -1795,13 +1787,17 @@ Müşteri veya kullanıcı yorumu göstermek için kullanılır.
 * `image` alanına doğru yolu yazın.
 * Content block görselleri için URL veya local path kullanılabilir.
 
-#### ‣ Önemli Kurallar
 
-* JSON yapısı bozulmamalıdır.
+
+#### ‣ Önemli Kurallar ve Notlar
+
+* JSON yapısı kesinlikle bozulmamalıdır.
 * Son satırdan sonra virgül konulmamalıdır.
 * `category` değeri filtre sistemine uygun olmalıdır.
 * Dosya ismi boşluk içermemelidir.
 * Index numarası tekrar etmemelidir.
+* `type` değerleri sistem tarafından okunur, değiştirilmemelidir.
+* Tüm alanlar zorunlu değildir; ancak profesyonel ve zengin bir proje sayfası için detaylı alanların doldurulması önerilir.
 
 
 
