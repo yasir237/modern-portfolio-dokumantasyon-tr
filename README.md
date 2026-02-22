@@ -1463,3 +1463,349 @@ Bu kategoriye ait projelerin `category` değeri de `"gameDevelopment"` olmalıd�
 * Her satır arasında virgül olmalıdır.
 * Son elemandan sonra virgül olmamalıdır.
 * Kategori anahtarları proje dosyaları ile eşleşmelidir.
+
+
+### Yeni Proje Nasıl Eklenir?
+
+Yeni bir proje eklemek için aşağıdaki adımları takip edin.
+
+
+
+#### ‣ 1️⃣ Doğru Klasöre Git
+
+Proje detayları şu klasörde yer alır:
+
+```
+messages/projects/details
+```
+
+Bu klasörün içinde dil klasörleri bulunur (örneğin `en`, `tr` gibi).
+
+‣  Eklemek istediğiniz projenin dili hangi klasördeyse, o klasöre yeni bir JSON dosyası oluşturmanız gerekir.
+
+Örneğin:
+
+```
+messages/projects/details/en/
+```
+
+#### ‣ 2️⃣ Dosya İsmini Doğru Oluştur
+
+Dosya ismi şu formatta olmalıdır:
+
+```
+index-projectname.json
+```
+
+Kurallar:
+
+* Önce proje sırası (index) yazılır
+* Ardından `-` konur
+* Proje adı boşluksuz yazılır
+* Küçük harf kullanılması önerilir
+
+#### ‣ Örnek:
+
+```
+12-nobadwords.json
+13-portfolioai.json
+14-mobilebankingapp.json
+```
+
+⚠️ Dikkat:
+
+* Proje adında boşluk olmamalıdır.
+* Her proje benzersiz bir index numarasına sahip olmalıdır.
+
+#### ‣ 3️⃣ JSON İçeriğini Ekleyin
+
+Dosyayı oluşturduktan sonra aşağıdaki temel yapıyı kopyalayıp düzenleyebilirsiniz:
+
+```json
+{
+  "id": 13,
+  "title": "Project Title",
+  "subtitle": "Project Subtitle",
+  "isFeatured": false,
+  "description": "Project Description",
+  "longDescription": "Project Long Description",
+  "category": "Project Category",
+  "tags": ["tag1", "tag2"],
+  "image": "image link",
+  "techLogos": ["techLogo1", "techLogo2"],
+  "date": "2026-02",
+  "duration": "4 months",
+  "teamSize": 1,
+  "role": "Your Role",
+  "demoLink": null,
+  "githubLink": null
+}
+```
+
+Daha gelişmiş projelerde aşağıdaki alanlar da kullanılabilir:
+
+* `technologies`
+* `contentBlocks`
+* `challenges`
+* `solutions`
+* `results`
+* `testimonial`
+
+
+
+#### ‣ Önemli Alanlar
+
+‣ id
+
+* Benzersiz olmalıdır.
+* Dosya index numarası ile eşleşmesi önerilir.
+
+‣ isFeatured
+
+* `true` → Ana sayfada öne çıkan projelerde görünür.
+* `false` → Sadece projeler sayfasında görünür.
+
+‣ category
+
+Bu değer, şu dosyadaki kategori anahtarlarından biri olmalıdır:
+
+```
+messages/projects/index/en.json
+```
+
+Örneğin:
+
+```json
+"category": "aiMl"
+```
+
+#### ‣ technologies
+
+Bu alan projede kullanılan teknolojileri detaylı şekilde göstermek için kullanılır.
+
+```json
+"technologies": [
+  {
+    "name": "Django & Python",
+    "description": "Backend API with machine learning integration"
+  }
+]
+```
+
+‣ Ne işe yarar?
+
+* Projede kullanılan ana teknolojileri listeler
+* Her teknoloji için kısa bir açıklama gösterir
+* Proje detay sayfasında ayrı bir bölüm olarak görünür
+
+‣ Kurallar
+
+* `name` → Teknolojinin adı
+* `description` → O teknolojinin projedeki rolü
+* En az 1 tane olabilir
+* Sıralama, sayfadaki görünüm sırasını belirler
+
+#### ‣ contentBlocks
+
+Bu alan proje detay sayfasının ana içeriğini oluşturur.
+Yani sayfadaki metinler, görseller ve kod örnekleri buradan yönetilir.
+
+Her blok farklı bir içerik türünü temsil eder.
+
+‣ **type: 0 → Metin Bloğu**
+
+Uzun açıklamalar için kullanılır.
+
+```json
+{
+  "type": 0,
+  "heading": "Project Overview",
+  "subheading": "Building a Safer Digital Environment",
+  "content": "Uzun açıklama metni..."
+}
+```
+
+**Alanlar**
+
+* `heading` → Bölüm başlığı
+* `subheading` → Alt başlık
+* `content` → Uzun açıklama metni
+  (Satır atlamak için `\n\n` kullanılır)
+
+‣ **type: 1 → Tek Görsel Bloğu**
+
+Bir adet büyük görsel göstermek için kullanılır.
+
+```json
+{
+  "type": 1,
+  "heading": "Platform Hero Section",
+  "imageUrl": "https://...",
+  "caption": "Görsel açıklaması"
+}
+```
+
+**Alanlar**
+
+* `imageUrl` → Görsel linki
+* `caption` → Görsel alt açıklaması
+
+‣ **type: 3 → Çoklu Görsel Bloğu**
+
+Birden fazla görseli grid şeklinde göstermek için kullanılır.
+
+```json
+{
+  "type": 3,
+  "heading": "Examples",
+  "images": [
+    {
+      "url": "https://...",
+      "alt": "Image alt text",
+      "caption": "Image caption 1"
+    },
+    {
+      "url": "https://...",
+      "alt": "Image alt text",
+      "caption": "Image caption 2"
+    }
+  ]
+}
+```
+
+**Alanlar**
+
+* `url` → Görsel linki
+* `alt` → SEO ve erişilebilirlik için alternatif metin
+* `caption` → Açıklama
+
+‣ **type: 4 → Kod Örneği Bloğu**
+
+API veya kullanım örnekleri göstermek için kullanılır.
+
+```json
+{
+  "type": 4,
+  "heading": "Usage Example",
+  "codeBlocks": [
+    {
+      "language": "javascript",
+      "label": "Node.js",
+      "code": "console.log('Hello');"
+    },
+    {
+      "language": "C#",
+      "label": "CSharp",
+      "code": "Console.WriteLine(\"Hello\");"
+    }
+  ],
+  "defaultTab": 0
+}
+```
+
+**Alanlar**
+
+* `language` → Kod dili (syntax highlight için)
+* `label` → Sekme başlığı
+* `code` → Kod içeriği
+* `defaultTab` → Varsayılan açık sekme indexi
+
+#### ‣ challenges
+
+Projede karşılaşılan teknik zorlukları listeler.
+
+```json
+"challenges": [
+  "Gerçek zamanlı performans sağlamak",
+  "Çok dilli model eğitimi"
+]
+```
+
+* Liste formatındadır
+* Her madde ayrı bir satırdır
+
+#### ‣ solutions
+
+Challenges bölümüne karşılık gelen çözümleri içerir.
+
+```json
+"solutions": [
+  "GPU destekli inference sistemi kuruldu",
+  "Custom transformer modeller eğitildi"
+]
+```
+
+#### ‣ results
+
+Projeye ait ölçülebilir sonuçları gösterir.
+
+```json
+"results": [
+  {
+    "metric": "Accuracy",
+    "value": "92.3%",
+    "description": "Detection accuracy"
+  },
+  {
+    "metric": "Speed",
+    "value": "250ms",
+    "description": "Average API response time"
+  }
+]
+```
+
+**Alanlar**
+
+* `metric` → Ölçüm adı
+* `value` → Sonuç değeri
+* `description` → Açıklama
+
+Bu alan özellikle kurumsal ve profesyonel projeler için önerilir.
+
+#### ‣ testimonial
+
+Müşteri veya kullanıcı yorumu göstermek için kullanılır.
+
+```json
+"testimonial": {
+  "text": "Proje hayatımızı değiştirdi...",
+  "author": "Ahmed Al-Rashid",
+  "position": "Community Manager"
+}
+```
+
+**Alanlar**
+
+* `text` → Yorum metni
+* `author` → Yorumu yapan kişi
+* `position` → Kişinin pozisyonu
+
+#### ‣ Önemli Notlar
+
+* Bu alanların tamamı zorunlu değildir.
+* Ancak profesyonel bir proje sayfası için önerilir.
+* JSON yapısı kesinlikle bozulmamalıdır.
+* Virgül hatalarına dikkat edilmelidir.
+* `type` değerleri sistem tarafından okunur, değiştirilmemelidir.
+
+
+#### ‣ Görseller
+
+* Görselleri uygun klasöre ekleyin.
+* `image` alanına doğru yolu yazın.
+* Content block görselleri için URL veya local path kullanılabilir.
+
+#### ‣ Önemli Kurallar
+
+* JSON yapısı bozulmamalıdır.
+* Son satırdan sonra virgül konulmamalıdır.
+* `category` değeri filtre sistemine uygun olmalıdır.
+* Dosya ismi boşluk içermemelidir.
+* Index numarası tekrar etmemelidir.
+
+
+
+
+
+
+
