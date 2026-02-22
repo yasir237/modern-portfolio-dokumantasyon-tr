@@ -1795,7 +1795,108 @@ Müşteri veya kullanıcı yorumu göstermek için kullanılır.
 
 
 
+## Yeni Bir Dil Nasıl Eklenir?
 
+Sisteme yeni bir dil eklemek için aşağıdaki adımları eksiksiz şekilde uygulamanız gerekir.
 
+#### ‣ 1️⃣ Dili Sisteme Tanımlayın
 
+Öncelikle dili sistem seviyesinde tanımlamanız gerekir.
+
+Aşağıdaki dosyayı açın:
+
+```
+data/systemLanguages.ts
+```
+
+Mevcut yapı:
+
+```ts
+export const systemLanguages = [
+  { code: 'en', name: 'English', locale: 'en-US' },
+] as const;
+```
+
+Örneğin Arapça eklemek istiyorsanız, `systemLanguages` dizisine şu satırı ekleyin:
+
+```ts
+{ code: 'ar', name: 'العربية', locale: 'ar-SA' }
+```
+
+Son hali şöyle olur:
+
+```ts
+export const systemLanguages = [
+  { code: 'en', name: 'English', locale: 'en-US' },
+  { code: 'ar', name: 'العربية', locale: 'ar-SA' }
+] as const;
+```
+
+#### ‣ 2️⃣ Gerekli Dil Dosyalarını Oluşturun
+
+Yeni dil için `messages` klasörü içinde ilgili JSON dosyalarını oluşturmanız gerekir.
+
+Aşağıdaki dosyalar oluşturulmalıdır:
+
+```
+messages/ar.json
+messages/certificates/ar.json
+messages/featuredProjectsWillDelete/ar.json
+messages/languages/ar.json
+messages/projects/index/ar.json
+messages/services/ar.json
+messages/skills/ar.json
+messages/vision/ar.json
+messages/volunteering/ar.json
+```
+
+#### ‣ 3️⃣ Proje Detayları İçin Dil Klasörü Oluşturun
+
+Proje detayları için ayrı bir klasör gerekir.
+
+Şu klasöre gidin:
+
+```
+messages/projects/details
+```
+
+Burada İngilizce için genelde şu yapı vardır:
+
+```
+messages/projects/details/en/
+```
+
+Yeni dil için:
+
+```
+messages/projects/details/ar/
+```
+
+klasörünü oluşturun.
+
+#### ‣ Projelerin Çevirisini Ekleyin
+
+Eğer sistemde İngilizce projeler mevcutsa (`details/en` klasöründe), aynı dosyaların Arapça versiyonlarını oluşturmanız gerekir.
+
+Örnek:
+
+```
+messages/projects/details/en/12-nobadwords.json
+```
+
+Bunun Arapça versiyonu:
+
+```
+messages/projects/details/ar/12-nobadwords.json
+```
+
+İçeriği aynı yapı korunarak, sadece metinler Arapça olacak şekilde düzenlenir.
+
+#### ‣ Önemli Kurallar
+
+* `code` değeri klasör ismi ile aynı olmalıdır.
+* Tüm mesaj dosyaları oluşturulmalıdır.
+* Proje detay klasörü oluşturulmadan dil aktif çalışmaz.
+* JSON yapısı değiştirilmemelidir.
+* Eksik dosya bırakılmamalıdır.
 
