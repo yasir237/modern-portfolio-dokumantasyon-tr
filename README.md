@@ -2089,7 +2089,7 @@ messages/projects/details/ar/12-nobadwords.json
 }
 ```
 
-messages/projects/details/[dil kodu]/[index-projcetname].json klasörün içindeki yapı:
+#### ‣ messages/projects/details/[dil kodu]/[index-projcetname].json klasörün içindeki yapı:
 
 ```json
 {
