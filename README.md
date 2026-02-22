@@ -1841,7 +1841,6 @@ Aşağıdaki dosyalar oluşturulmalıdır:
 ```
 messages/ar.json
 messages/certificates/ar.json
-messages/featuredProjectsWillDelete/ar.json
 messages/languages/ar.json
 messages/projects/index/ar.json
 messages/services/ar.json
@@ -1899,4 +1898,547 @@ messages/projects/details/ar/12-nobadwords.json
 * Proje detay klasörü oluşturulmadan dil aktif çalışmaz.
 * JSON yapısı değiştirilmemelidir.
 * Eksik dosya bırakılmamalıdır.
+
+
+#### ‣ messages\[dil kodu].json klasörün içindeki yapı:
+```json
+{
+  "header": {
+    "home": "",
+    "stats": "",
+    "services": "",
+    "work": "",
+    "projects": "",
+    "resume": "",
+    "about": "",
+    "skills": "",
+    "languages": "",
+    "volunteering": "",
+    "certificates": "",
+    "contact": "",
+    "startAProject": ""
+  },
+  "home": {
+    "hero": {
+      "greeting": "",
+      "name": "",
+      "titleLine1": "",
+      "titleLine2": "",
+      "description": "",
+      "downloadCV": "",
+      "viewWork": "",
+      "follow": ""
+    },
+    "stats": {
+      "title": "",
+      "subtitle": "",
+      "yearsLabel": "",
+      "yearsDesc": "",
+      "projectsLabel": "",
+      "projectsDesc": "",
+      "clientsLabel": "",
+      "clientsDesc": "",
+      "awardsLabel": "",
+      "awardsDesc": "",
+      "trustedBy": "",
+      "yearsExp": "",
+      "projects": "",
+      "k": ""
+    }
+  },
+  "contact": {
+    "title": "",
+    "subtitle": "",
+    "badge": "",
+    "form": {
+      "name": {
+        "label": "",
+        "placeholder": ""
+      },
+      "email": {
+        "label": "",
+        "placeholder": ""
+      },
+      "subject": {
+        "label": "",
+        "placeholder": ""
+      },
+      "message": {
+        "label": "",
+        "placeholder": ""
+      },
+      "submit": "",
+      "sending": ""
+    },
+    "success": {
+      "title": "",
+      "message": ""
+    },
+    "info": {
+      "email": {
+        "title": ""
+      },
+      "phone": {
+        "title": ""
+      },
+      "location": {
+        "title": ""
+      }
+    },
+    "social": {
+      "title": ""
+    }
+  },
+  "loading": {
+    "text": ""
+  },
+  "backToProjects": "",
+  "technologiesUsed": "",
+  "projectLink": "",
+  "liveDemo": "",
+  "sourceCode": "",
+  "challenges": "",
+  "solutions": "",
+  "duration": "",
+  "teamSize": "",
+  "resultsImpact": "",
+  "videoNotSupported": "",
+  "client": "",
+  "technologies": "",
+  "date": ""
+}
+```
+
+
+#### ‣ messages\certificates\[dil kodu].json klasörün içindeki yapı:
+```json
+{
+  "title": "",
+  "subtitle": "",
+  "certificatesCount": "",
+  "viewCertificate": "",
+  "of": "",
+  "categories": {
+    "ai": "",
+    "dataScience": "",
+    "cybersecurity": "",
+    "php": "",
+    "cloudComputing": "",
+    "programming": "",
+    "devops": "",
+    "softSkills": "",
+    "network": "",
+    "effectiveCommunication": "",
+    "trainingTrainers": ""
+  },
+  "certificates": [
+    {
+      "title": "",
+      "issuer": "",
+      "date": "",
+      "category": "",
+      "img": "",
+      "link": ""
+    },
+    {
+      "title": "",
+      "issuer": "",
+      "date": "",
+      "category": "",
+      "img": "",
+      "link": ""
+    }
+  ]
+}
+```
+
+
+#### ‣ messages\languages\[dil kodu].json klasörün içindeki yapı:
+```json
+{
+  "title": "",
+  "subtitle": "",
+  "levels": {
+    "native": "",
+    "professional": "",
+    "intermediate": ""
+  },
+  "languages": [
+    {
+      "name": "",
+      "nativeName": "",
+      "level": "",
+      "flag": "",
+      "backward": ""
+    },
+    {
+      "name": "",
+      "nativeName": "",
+      "level": "",
+      "flag": "",
+      "backward": ""
+    },
+    {
+      "name": "",
+      "nativeName": "",
+      "level": "",
+      "flag": "",
+      "backward": ""
+    }
+  ]
+}
+```
+
+messages\projects\details\[dil kodu]\[index-projcetname].json klasörün içindeki yapı:
+
+```json
+{
+  "id": 0,
+  "title": "",
+  "subtitle": "",
+  "isFeatured": false,
+  "description": "",
+  "longDescription": "",
+  "category": "",
+  "tags": [
+    "",
+    "",
+    ""
+  ],
+  "image": "",
+  "techLogos": [
+    "",
+    "",
+    ""
+  ],
+  "date": "",
+  "duration": "",
+  "teamSize": 0,
+  "role": "",
+  "demoLink": "",
+  "githubLink": null,
+  "technologies": [
+    {
+      "name": "",
+      "description": ""
+    },
+    {
+      "name": "",
+      "description": ""
+    },
+    {
+      "name": "",
+      "description": ""
+    }
+  ],
+  "contentBlocks": [
+    {
+      "type": 0,
+      "heading": "",
+      "subheading": "",
+      "content": ""
+    },
+    {
+      "type": 1,
+      "heading": "",
+      "imageUrl": "",
+      "caption": ""
+    },
+    {
+      "type": 2,
+      "heading": "",
+      "videoUrl": "",
+      "posterUrl": "",
+      "caption": ""
+    },
+    {
+      "type": 3,
+      "heading": "",
+      "images": [
+        {
+          "url": "",
+          "alt": "",
+          "caption": ""
+        },
+        {
+          "url": "",
+          "alt": "",
+          "caption": ""
+        },
+        {
+          "url": "",
+          "alt": "",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": 4,
+      "heading": "",
+      "codeBlocks": [
+        {
+          "language": "",
+          "label": "",
+          "code": ""
+        },
+        {
+          "language": "",
+          "label": "",
+          "code": ""
+        },
+        {
+          "language": "",
+          "label": "",
+          "code": ""
+        }
+      ],
+      "defaultTab": 0
+    }
+  ],
+  "challenges": [
+    "",
+    "",
+    ""
+  ],
+  "solutions": [
+    "",
+    "",
+    ""
+  ],
+  "results": [
+    {
+      "metric": "",
+      "value": "",
+      "description": ""
+    },
+    {
+      "metric": "",
+      "value": "",
+      "description": ""
+    },
+    {
+      "metric": "",
+      "value": "",
+      "description": ""
+    }
+  ],
+  "testimonial": {
+    "text": "",
+    "author": "",
+    "position": ""
+  }
+}
+```
+
+
+#### ‣ messages\projects\index\[dil kodu].json klasörün içindeki yapı:
+
+```json
+{
+  "hero": {
+    "badge": "",
+    "title": "",
+    "subtitle": ""
+  },
+  "search": {
+    "placeholder": "",
+    "filterButton": "",
+    "showingResults": "",
+    "project": "",
+    "projects": ""
+  },
+  "categories": {
+    "all": "",
+    "webDevelopment": "",
+    "mobileApp": "",
+    "design": "",
+    "aiMl": "",
+    "blockchain": ""
+  },
+  "projectCard": {
+    "technologiesUsed": ""
+  },
+  "noResults": {
+    "title": "",
+    "description": "",
+    "clearButton": ""
+  },
+  "featuredProjects": {
+    "title": "",
+    "subtitle": "",
+    "viewProject": "",
+    "allProjects": {
+      "title": "",
+      "description": "",
+      "button": "",
+      "stats": {
+        "projects": "",
+        "technologies": "",
+        "years": ""
+      }
+    }
+  }
+}
+```
+
+#### ‣ messages\resume\[dil kodu].json klasörün içindeki yapı:
+```json
+{
+  "title": "",
+  "subtitle": "",
+  "tabs": {
+    "experience": "",
+    "education": ""
+  },
+  "experience": [
+    {
+      "year": "",
+      "title": "",
+      "company": ""
+    },
+    {
+      "year": "",
+      "title": "",
+      "company": ""
+    },
+    {
+      "year": "",
+      "title": "",
+      "company": ""
+    }
+  ],
+  "education": [
+    {
+      "year": "",
+      "title": "",
+      "company": ""
+    },
+    {
+      "year": "",
+      "title": "",
+      "company": ""
+    },
+    {
+      "year": "",
+      "title": "",
+      "company": ""
+    }
+  ]
+}
+```
+
+#### ‣ messages\services\[dil kodu].json klasörün içindeki yapı:
+```json
+{
+  "title": "",
+  "subtitle": "",
+  "items": [
+    {
+      "title": "",
+      "description": "",
+      "icon": ""
+    },
+    {
+      "title": "",
+      "description": "",
+      "icon": ""
+    },
+    {
+      "title": "",
+      "description": "",
+      "icon": ""
+    }
+  ]
+}
+```
+
+#### ‣ messages\skills\[dil kodu].json klasörün içindeki yapı:
+```json
+{
+  "title": "",
+  "subtitle": "",
+  "categories": {
+    "programmingLanguages": "",
+    "frameworks": "",
+    "concepts": "",
+    "databases": ""
+  },
+  "skills": {
+    "programmingLanguages": [
+      { "name": "" },
+      { "name": "" }
+    ],
+    "frameworks": [
+      { "name": "" },
+      { "name": "" }
+    ],
+    "concepts": [
+      { "name": "" },
+      { "name": "" }
+    ],
+    "databases": [
+      { "name": "" },
+      { "name": "" }
+    ]
+  }
+}
+```
+
+#### ‣ messages\vision\[dil kodu].json klasörün içindeki yapı:
+```json
+{
+  "statements": [
+    {
+      "text": "",
+      "direction": ""
+    },
+    {
+      "text": "",
+      "direction": ""
+    },
+    {
+      "text": "",
+      "direction": ""
+    }
+  ]
+}
+```
+
+#### ‣ messages\volunteering\[dil kodu].json klasörün içindeki yapı:
+```json
+{
+  "title": "",
+  "volunteering": [
+    {
+      "role": "",
+      "organization": "",
+      "event": "",
+      "location": "",
+      "date": "",
+      "description": "",
+      "image": ""
+    },
+    {
+      "role": "",
+      "organization": "",
+      "event": "",
+      "location": "",
+      "date": "",
+      "description": "",
+      "image": ""
+    },
+    {
+      "role": "",
+      "organization": "",
+      "event": "",
+      "location": "",
+      "date": "",
+      "description": "",
+      "image": ""
+    }
+  ]
+}
+```
+
+
 
