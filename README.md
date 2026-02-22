@@ -1542,16 +1542,10 @@ Dosyayı oluşturduktan sonra aşağıdaki temel yapıyı kopyalayıp düzenleye
 }
 ```
 
-Daha gelişmiş projelerde aşağıdaki alanlar da kullanılabilir:
-
-* `technologies`
-* `contentBlocks`
-* `challenges`
-* `solutions`
-* `results`
-* `testimonial`
-
-
+Mevcut logo isimlerini görmek için şu dosyaya bakabilirsiniz:
+```
+data/techIcons.ts
+```
 
 #### ‣ Önemli Alanlar
 
