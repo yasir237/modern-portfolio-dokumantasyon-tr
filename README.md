@@ -1900,7 +1900,7 @@ messages/projects/details/ar/12-nobadwords.json
 * Eksik dosya bırakılmamalıdır.
 
 
-#### ‣ messages\[dil kodu].json klasörün içindeki yapı:
+#### ‣ messages/[dil kodu].json klasörün içindeki yapı:
 ```json
 {
   "header": {
@@ -2010,7 +2010,7 @@ messages/projects/details/ar/12-nobadwords.json
 ```
 
 
-#### ‣ messages\certificates\[dil kodu].json klasörün içindeki yapı:
+#### ‣ messages/certificates/[dil kodu].json klasörün içindeki yapı:
 ```json
 {
   "title": "",
@@ -2053,7 +2053,7 @@ messages/projects/details/ar/12-nobadwords.json
 ```
 
 
-#### ‣ messages\languages\[dil kodu].json klasörün içindeki yapı:
+#### ‣ messages/languages/[dil kodu].json klasörün içindeki yapı:
 ```json
 {
   "title": "",
@@ -2089,7 +2089,7 @@ messages/projects/details/ar/12-nobadwords.json
 }
 ```
 
-messages\projects\details\[dil kodu]\[index-projcetname].json klasörün içindeki yapı:
+messages/projects/details/[dil kodu]/[index-projcetname].json klasörün içindeki yapı:
 
 ```json
 {
@@ -2231,7 +2231,7 @@ messages\projects\details\[dil kodu]\[index-projcetname].json klasörün içinde
 ```
 
 
-#### ‣ messages\projects\index\[dil kodu].json klasörün içindeki yapı:
+#### ‣ messages/projects/index/[dil kodu].json klasörün içindeki yapı:
 
 ```json
 {
@@ -2281,7 +2281,7 @@ messages\projects\details\[dil kodu]\[index-projcetname].json klasörün içinde
 }
 ```
 
-#### ‣ messages\resume\[dil kodu].json klasörün içindeki yapı:
+#### ‣ messages/resume/[dil kodu].json klasörün içindeki yapı:
 ```json
 {
   "title": "",
@@ -2327,7 +2327,7 @@ messages\projects\details\[dil kodu]\[index-projcetname].json klasörün içinde
 }
 ```
 
-#### ‣ messages\services\[dil kodu].json klasörün içindeki yapı:
+#### ‣ messages/services/[dil kodu].json klasörün içindeki yapı:
 ```json
 {
   "title": "",
@@ -2352,7 +2352,7 @@ messages\projects\details\[dil kodu]\[index-projcetname].json klasörün içinde
 }
 ```
 
-#### ‣ messages\skills\[dil kodu].json klasörün içindeki yapı:
+#### ‣ messages/skills/[dil kodu].json klasörün içindeki yapı:
 ```json
 {
   "title": "",
@@ -2384,7 +2384,7 @@ messages\projects\details\[dil kodu]\[index-projcetname].json klasörün içinde
 }
 ```
 
-#### ‣ messages\vision\[dil kodu].json klasörün içindeki yapı:
+#### ‣ messages/vision/[dil kodu].json klasörün içindeki yapı:
 ```json
 {
   "statements": [
@@ -2404,7 +2404,7 @@ messages\projects\details\[dil kodu]\[index-projcetname].json klasörün içinde
 }
 ```
 
-#### ‣ messages\volunteering\[dil kodu].json klasörün içindeki yapı:
+#### ‣ messages/volunteering/[dil kodu].json klasörün içindeki yapı:
 ```json
 {
   "title": "",
