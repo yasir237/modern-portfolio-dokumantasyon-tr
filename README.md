@@ -132,7 +132,7 @@ export const contactData = {
 
 Buraya kendi e-posta adresinizi yazabilirsiniz.
 
----
+
 ### Ana Sayfa → Hero
 
 Bu görsel, sitenin en üst bölümünün (Hero alanı) hangi dosyalardan beslendiğini göstermektedir.
