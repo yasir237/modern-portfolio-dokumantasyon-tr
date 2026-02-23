@@ -215,7 +215,7 @@ export const contactData: ContactData = {
 
 ```
 
-Sosyal medya linklerini güncellemek için href kısmına kendi profil bağlantınızı yazmanız yeterlidir.
+Sosyal medya linklerini güncellemek için `href` kısmına kendi profil bağlantınızı yazmanız yeterlidir.
 
 
 
